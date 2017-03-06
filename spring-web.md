@@ -159,3 +159,22 @@ dimmaryanto93@E5-473G:~/workspace/belajar/springboot-thymeleaf$ mvn clean spring
 Sekarang kita tinggal Browsing di Web Browser seperti `Chrome`, `Firefox` atau `Safari` dan lain-lain di alamat [localhost:8080/login](http://localhost:8080/login) maka hasilnya seperti berikut:
 
 ![halaman-utama](docs/imgs/halaman-utama.png)
+
+### Running with IntelliJ IDEA
+
+Untuk menjalankan di IntelliJ IDEA ada beberapa yang harus di configurasi, seperti berikut:
+
+`Menu` -> `Run` -> `Edit Configuration` -> `Add new configuration` - `Spring Boot`
+
+![spring-boot-configuration-idea](docs/imgs/running-with-idea.png)
+
+**Penjelasan**
+
+- `Name` : isi aja bebas kok.
+- `Main Class` : pilih `com.dimmaryanto93.engineer.SpringWebApplication`
+- `JRE` : pilih yang version `java-8-oracle`
+- Setelah itu klik OK. setelah itu configuration akan muncul di toolbar seperti berikut:
+
+![toolbar-idea-running](docs/imgs/idea-toolbar-springboot.png)
+
+- Klik button start.
