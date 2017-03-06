@@ -26,7 +26,7 @@ mvn clean package
 
 Setelah selasai, maka kita bisa lihat dependencynya bertambah seperti berikut:
 
-![webjars-bootstrap](docs/imgs/webjars-bootstrap.png)
+![webjars-bootstrap](imgs/webjars-bootstrap.png)
 
 Kemudian kita tinggal tambahkan link untuk menginclude file `css` dan `js` bootstrap di file `login.html` seperti berikut:
 
@@ -50,4 +50,4 @@ Dan setelah itu kita check dengan membuat sebuah element alert di bootstrap sepe
 
 Jika di jalankan maka hasilnya seperti berikut:
 
-![enable-bootstrap](docs/imgs/enabled-bootstrap.png)
+![enable-bootstrap](imgs/enabled-bootstrap.png)
