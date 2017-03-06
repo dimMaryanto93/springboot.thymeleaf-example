@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>User Register</title>
+    <link href="webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <script src="webjars/jquery/1.11.1/jquery.min.js"
+            th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+</head>
+<body class="container-fluid">
+
+<!--/*@thymesVar id="usermanagement" type="com.dimmaryanto93.engineer.entities.UserManagement"*/-->
+<form th:object="${usermanagement}" th:action="@{/user/management/register}" th:method="post">
+    <div class="input-group">
+        <label class="control-label">Username</label>
+        <input type="text" th:field="*{username}" value="Dimas Maryanto" class="form-control"/>
+    </div>
+    <div class="input-group">
+        <label class="control-label">Password</label>
+        <input type="password" th:field="*{password}" value="dimas889563" class="form-control"/>
+    </div>
+    <div class="input-group">
+        <label class="control-label">ROLE</label>
+        <select th:field="*{role}" class="form-control">
+            <!--/*@thymesVar id="listRole" type="com.dimmaryanto93.engineer.controllers.UserManagementController"*/-->
+            <option th:each="role : ${listRole}" th:value="${role}"><span th:text="${role}"></span></option>
+        </select>
+    </div>
+    <div class="input-group">
+        <input type="submit" class="btn btn-primary" value="Kirim"/>
+    </div>
+</form>
+</body>
+</html>
