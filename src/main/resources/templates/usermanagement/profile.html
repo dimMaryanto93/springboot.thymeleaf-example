@@ -13,26 +13,19 @@
 <body class="container-fluid">
 
 <!--/*@thymesVar id="usermanagement" type="com.dimmaryanto93.engineer.entities.UserManagement"*/-->
-<form class="form-group form-horizontal"
-      th:object="${usermanagement}" th:action="@{/user/management/register}" th:method="post">
+<div class="form-group form-horizontal" th:object="${usermanagement}">
     <div class="input-group">
         <label class="control-label">Username</label>
-        <input type="text" th:field="*{username}" value="Dimas Maryanto" class="form-control"/>
+        <input th:value="*{username}" class="form-control" readonly="readonly"/>
     </div>
     <div class="input-group">
         <label class="control-label">Password</label>
-        <input type="password" th:field="*{password}" value="dimas889563" class="form-control"/>
+        <input th:value="*{password}" class="form-control" readonly="readonly"/>
     </div>
     <div class="input-group">
-        <label class="control-label">ROLE</label>
-        <select th:field="*{role}" class="form-control">
-            <!--/*@thymesVar id="listRole" type="com.dimmaryanto93.engineer.controllers.UserManagementController"*/-->
-            <option th:each="role : ${listRole}" th:value="${role}"><span th:text="${role}"></span></option>
-        </select>
+        <label class="control-label">Role</label>
+        <input th:value="*{role}" class="form-control" readonly="readonly"/>
     </div>
-    <div class="input-group">
-        <input type="submit" class="btn btn-primary" value="Kirim"/>
-    </div>
-</form>
+</div>
 </body>
 </html>

@@ -32,6 +32,16 @@ public class UserManagementController {
         return "/usermanagement/register";
     }
 
+    @GetMapping("/profile")
+    public String getUserProfile(Model model) {
+        UserManagement user = new UserManagement();
+        user.setUsername("dimMaryanto93");
+        user.setPassword(UUID.randomUUID().toString());
+        user.setRole("ROLE_ADMIN");
+        model.addAttribute("usermanagement", user);
+        return "/usermanagement/profile";
+    }
+
     @PostMapping("/register")
     public String postingUser(@ModelAttribute UserManagement user) {
         console.info("informasi user {} : {} : {}", user.getUsername(), user.getPassword(), user.getRole());
